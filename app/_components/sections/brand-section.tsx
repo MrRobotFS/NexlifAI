@@ -60,7 +60,7 @@ const brands = [
 
 export const BrandSection: React.FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800/50">
+    <section className="py-16 lg:py-24 bg-brand-light/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export const BrandSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Powering Innovation for
           </h2>
           <p className="text-xl text-gradient font-semibold">Industry Leaders</p>
@@ -85,9 +85,9 @@ export const BrandSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.1, y: -5 }}
-              className="flex items-center justify-center p-6 bg-white dark:bg-gray-900 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 grayscale hover:grayscale-0 cursor-pointer"
+              className="glass-card flex items-center justify-center p-6 hover:shadow-glass transition-all duration-300 grayscale hover:grayscale-0 cursor-pointer"
             >
-              <div className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+              <div className="text-brand-primary hover:text-brand-accent transition-colors">
                 {brand.logo}
               </div>
             </motion.div>
@@ -109,9 +109,9 @@ export const BrandSection: React.FC = () => {
             {[...brands, ...brands].map((brand, index) => (
               <div
                 key={`${brand.name}-${index}`}
-                className="flex-shrink-0 w-48 flex items-center justify-center p-6 bg-white dark:bg-gray-900 rounded-xl shadow-sm grayscale"
+                className="flex-shrink-0 w-48 glass-card flex items-center justify-center p-6 grayscale"
               >
-                <div className="text-gray-600 dark:text-gray-300">
+                <div className="text-brand-primary">
                   {brand.logo}
                 </div>
               </div>
@@ -129,19 +129,19 @@ export const BrandSection: React.FC = () => {
         >
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-gradient mb-2">50+</div>
-            <div className="text-gray-600 dark:text-gray-400 text-sm">Enterprise Clients</div>
+            <div className="text-gray-600 text-sm">Enterprise Clients</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-gradient mb-2">10M+</div>
-            <div className="text-gray-600 dark:text-gray-400 text-sm">Users Served</div>
+            <div className="text-gray-600 text-sm">Users Served</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-gradient mb-2">99.9%</div>
-            <div className="text-gray-600 dark:text-gray-400 text-sm">Uptime</div>
+            <div className="text-gray-600 text-sm">Uptime</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-gradient mb-2">5★</div>
-            <div className="text-gray-600 dark:text-gray-400 text-sm">Average Rating</div>
+            <div className="text-gray-600 text-sm">Average Rating</div>
           </div>
         </motion.div>
       </div>

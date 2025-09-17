@@ -26,7 +26,7 @@ const services = [
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-gray-900">
+    <section id="services" className="py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,9 +40,9 @@ export const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-accent-purple/10 to-accent-blue/10 border border-accent-purple/20 rounded-full px-6 py-2 mb-6"
+            className="glass-card inline-flex items-center space-x-2 rounded-full px-6 py-2 mb-6"
           >
-            <span className="text-sm font-medium text-accent-purple dark:text-accent-blue">
+            <span className="text-sm font-medium text-brand-primary">
               Our Expertise
             </span>
           </motion.div>
@@ -56,7 +56,7 @@ export const ServicesSection: React.FC = () => {
           >
             <span className="text-gradient">Transform Your Business</span>
             <br />
-            <span className="text-gray-900 dark:text-white">with Cutting-Edge Technology</span>
+            <span className="text-gray-900">with Cutting-Edge Technology</span>
           </motion.h2>
           
           <motion.p
@@ -64,7 +64,7 @@ export const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             We specialize in three core areas that drive digital transformation and business growth. 
             Explore our services and discover how we can help you achieve your goals.
@@ -90,55 +90,55 @@ export const ServicesSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative bg-gradient-to-br from-accent-purple/10 to-accent-blue/10 rounded-2xl p-8 overflow-hidden">
+            <div className="relative glass-card p-8 overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-accent-purple to-accent-blue rounded-lg opacity-20"></div>
-                <div className="absolute top-16 right-8 w-12 h-12 bg-gradient-to-br from-accent-blue to-accent-purple rounded-full opacity-30"></div>
-                <div className="absolute bottom-8 left-12 w-16 h-16 bg-gradient-to-br from-accent-purple to-accent-blue rounded-lg opacity-25"></div>
+                <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-brand-primary to-brand-accent rounded-lg opacity-10"></div>
+                <div className="absolute top-16 right-8 w-12 h-12 bg-gradient-to-br from-brand-accent to-brand-primary rounded-full opacity-15"></div>
+                <div className="absolute bottom-8 left-12 w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-lg opacity-12"></div>
               </div>
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Why Choose nexlifAI?
                 </h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full flex-shrink-0 mt-1"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Expert Team</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Our team of AI engineers and developers bring decades of combined experience.</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">Expert Team</h4>
+                      <p className="text-gray-600">Our team of AI engineers and developers bring decades of combined experience.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full flex-shrink-0 mt-1"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Proven Results</h4>
-                      <p className="text-gray-600 dark:text-gray-300">We&apos;ve successfully delivered 500+ projects with measurable business impact.</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">Proven Results</h4>
+                      <p className="text-gray-600">We&apos;ve successfully delivered 500+ projects with measurable business impact.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full flex-shrink-0 mt-1"></div>
+                    <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">24/7 Support</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Round-the-clock support to ensure your systems run smoothly.</p>
+                      <h4 className="font-semibold text-gray-900 mb-2">24/7 Support</h4>
+                      <p className="text-gray-600">Round-the-clock support to ensure your systems run smoothly.</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div className="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-gradient">40%</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Cost Reduction</div>
+                    <div className="text-sm text-gray-600">Cost Reduction</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-gradient">3x</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Faster Delivery</div>
+                    <div className="text-sm text-gray-600">Faster Delivery</div>
                   </div>
                 </div>
               </div>

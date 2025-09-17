@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline' | 'glass'
   size?: 'sm' | 'md' | 'lg'
   children: React.ReactNode
   className?: string
@@ -22,12 +22,13 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   disabled = false,
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
-  
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 border'
+
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-accent-purple to-accent-blue text-white hover:shadow-lg hover:scale-105 focus:ring-accent-purple',
-    secondary: 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700',
-    outline: 'border-2 border-gradient-to-r from-accent-purple to-accent-blue text-accent-purple dark:text-accent-blue hover:bg-gradient-to-r hover:from-accent-purple hover:to-accent-blue hover:text-white'
+    primary: 'bg-gradient-to-r from-brand-primary to-brand-accent text-white hover:shadow-glass hover:scale-105 focus:ring-brand-primary/50 border-transparent hover:-translate-y-1',
+    secondary: 'glass-card text-brand-primary hover:text-brand-accent border-glass-border hover:shadow-glass hover:-translate-y-1',
+    outline: 'border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white hover:shadow-glass hover:-translate-y-1',
+    glass: 'glass-button text-brand-primary hover:text-brand-accent border-glass-border hover:-translate-y-1'
   }
   
   const sizeClasses = {
@@ -38,9 +39,14 @@ export const Button: React.FC<ButtonProps> = ({
   
   return (
     <motion.button
-      whileHover={{ scale: 1.02 }}
+      whileHover={{
+        scale: 1.02,
+        y: -2
+      }}
       whileTap={{ scale: 0.98 }}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${
+        disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+      }`}
       onClick={onClick}
       type={type}
       disabled={disabled}

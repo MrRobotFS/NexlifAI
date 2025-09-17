@@ -7,7 +7,7 @@ import { ArrowRight, MessageCircle, Calendar } from 'lucide-react'
 
 export const CTASection: React.FC = () => {
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gray-900 dark:bg-gray-800 relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-brand-primary to-brand-secondary relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -20,7 +20,7 @@ export const CTASection: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-accent-purple/20 to-accent-blue/20 rounded-full blur-3xl"
+          className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-white/10 to-brand-light/10 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -33,7 +33,7 @@ export const CTASection: React.FC = () => {
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute -bottom-24 -left-24 w-80 h-80 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 rounded-full blur-3xl"
+          className="absolute -bottom-24 -left-24 w-80 h-80 bg-gradient-to-br from-brand-light/10 to-white/10 rounded-full blur-3xl"
         />
       </div>
 
@@ -53,7 +53,7 @@ export const CTASection: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 rounded-full px-6 py-2 mb-6"
+                className="glass-card inline-flex items-center space-x-2 rounded-full px-6 py-2 mb-6"
               >
                 <span className="text-sm font-medium text-white">
                   Ready to Get Started?
@@ -90,16 +90,16 @@ export const CTASection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Button size="lg" className="text-lg px-8 py-4 bg-white text-gray-900 hover:bg-gray-100">
+                <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
                   <MessageCircle className="mr-2 w-5 h-5" />
                   Contact Us
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10"
+
+                <Button
+                  variant="glass"
+                  size="lg"
+                  className="text-lg px-8 py-4 text-white border-white/30 hover:bg-white/10"
                 >
                   <Calendar className="mr-2 w-5 h-5" />
                   Schedule a Call
@@ -158,7 +158,7 @@ export const CTASection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"
+                className="glass-card p-6 text-center hover:shadow-glass transition-all duration-300"
               >
                 <div className="text-3xl mb-3">{feature.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
