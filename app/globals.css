@@ -26,6 +26,16 @@ body {
       radial-gradient(circle at 75% 75%, rgba(79, 114, 117, 0.06) 0%, transparent 50%);
   }
 
+  /* Infinite Scroll Animation for Brand Logos */
+  .animate-infinite-scroll {
+    animation: infinite-scroll 50s linear infinite;
+  }
+
+  @keyframes infinite-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
   /* Modern Full-width Navbar */
   .modern-navbar {
     position: relative;
@@ -78,6 +88,22 @@ body {
       0 4px 20px rgba(0, 0, 0, 0.25),
       0 1px 4px rgba(0, 0, 0, 0.15),
       inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  }
+
+  /* Frosted Glass Card for Logos */
+  .logo-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .dark .logo-card {
+    background-color: rgba(31, 41, 55, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(55, 65, 81, 0.2);
   }
 
   /* Navigation Items - Modern Style */

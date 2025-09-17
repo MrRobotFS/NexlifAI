@@ -20,7 +20,7 @@ export const HeroSection: React.FC = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-brand-light/10 to-white dark:from-gray-900 dark:via-gray-800/50 dark:to-gray-900 pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900 pt-20"
       onMouseMove={handleMouseMove}
     >
       {/* Particles Background */}
