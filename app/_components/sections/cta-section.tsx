@@ -26,7 +26,7 @@ const CtaContent = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.3 }}
-      className="text-4xl lg:text-5xl font-bold text-white mb-6"
+      className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
     >
       Ready to Transform
       <br />
@@ -38,9 +38,9 @@ const CtaContent = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="text-xl text-gray-300 leading-relaxed mb-8"
+      className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8"
     >
-      Let&apos;s discuss how nexlifAI can help you achieve your goals. Our experts are ready to 
+      Let&apos;s discuss how nexlifAI can help you achieve your goals. Our experts are ready to
       build your next big idea and transform your operations with cutting-edge AI technology.
     </motion.p>
 
@@ -101,7 +101,7 @@ export const CTASection: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <CtaContent />
           <ContactForm />
         </div>

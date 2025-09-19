@@ -7,7 +7,7 @@ const showcaseData = [
   {
     title: "Code Migration + Refactors",
     points: ["Language migrations", "Version upgrades", "Codebase restructuring"],
-    color: "from-blue-500 to-blue-600",
+    color: "from-brand-primary to-brand-secondary",
     chatTitle: "migrate music repo to Python",
     chatContent: [
       { user: "Dev", time: "Aug 15, 2024, 4:35 PM", message: "Migrate the music-generation repo from Java 8 to Python 3.11. As you migrate, you should also add small tests to each new python file to ensure that the code can run." },
@@ -26,7 +26,7 @@ Testing Filter:
   {
     title: "Data Engineering + Analysis",
     points: ["Data warehouse migrations", "ETL development", "Data cleaning and preprocessing"],
-    color: "from-cyan-500 to-cyan-600",
+    color: "from-brand-accent to-brand-primary",
     chatTitle: "Price Visualization + Analysis",
     chatContent: [
       { user: "Devin", time: "Aug 31, 2024, 7:07 AM", message: "I have completed the requested visualizations." }
@@ -43,7 +43,7 @@ Year  results_price
   {
     title: "Bugs + Backlog Work",
     points: ["Ticket resolution", "CI/CD", "First-draft PR creation for backlog tasks"],
-    color: "from-teal-500 to-teal-600",
+    color: "from-brand-secondary to-brand-accent",
     chatTitle: "Invalid auto-triage link",
     chatContent: [
       { user: "Devin", time: "May 30, 2024, 10:53 AM", message: "Got it! I'll look into the exception in `run_main` and the failed auto-triage link format issue." },
@@ -70,10 +70,33 @@ export const ShowcaseSection: React.FC = () => {
 
   return (
     <section id="showcase" className="py-20 sm:py-32 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Accordion Container */}
-        <div className="flex h-[600px] rounded-3xl overflow-hidden bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 gap-1">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
+          >
+            <span className="text-gradient">Our Work</span>
+            <br />
+            <span className="text-gray-900 dark:text-white">in Action</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            See how we've helped businesses transform their operations with AI solutions
+          </motion.p>
+        </div>
+
+        {/* Accordion Container - Hidden on mobile, shown on desktop */}
+        <div className="hidden lg:flex h-[600px] rounded-3xl overflow-hidden bg-gradient-to-r from-brand-primary via-brand-accent to-brand-secondary gap-1">
 
           {showcaseData.map((item, index) => (
             <motion.div
@@ -205,6 +228,53 @@ export const ShowcaseSection: React.FC = () => {
                   ))}
                 </motion.div>
               )}
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile Version - Card Grid */}
+        <div className="lg:hidden space-y-6">
+          {showcaseData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className={`p-6 rounded-2xl bg-gradient-to-br ${item.color} text-white`}
+            >
+              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+              <ul className="space-y-2 mb-6">
+                {item.points.map((point, i) => (
+                  <li key={i} className="flex items-start space-x-2">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-sm">{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Mobile Chat Simulation */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
+                <h4 className="font-semibold text-sm mb-3">{item.chatTitle}</h4>
+                <div className="space-y-2 text-xs">
+                  {item.chatContent.slice(0, 1).map((chat, i) => (
+                    <div key={i} className="bg-white/20 rounded p-2">
+                      <div className="flex items-center space-x-2 mb-1">
+                        <div className="w-3 h-3 bg-white/60 rounded-full"></div>
+                        <span className="font-medium">{chat.user}</span>
+                      </div>
+                      <p className="leading-relaxed opacity-90">{chat.message.slice(0, 100)}...</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Terminal Simulation */}
+              <div className="bg-black/40 rounded-lg p-3">
+                <div className="text-green-300 text-xs font-mono">
+                  {item.workspaceContent.split('\n').slice(0, 3).join('\n')}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

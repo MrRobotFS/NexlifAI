@@ -26,7 +26,7 @@ const services = [
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white">
+    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,11 +52,11 @@ export const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-4xl lg:text-5xl font-bold mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6"
           >
             <span className="text-gradient">Transform Your Business</span>
             <br />
-            <span className="text-gray-900">with Cutting-Edge Technology</span>
+            <span className="text-gray-900 dark:text-white">with Cutting-Edge Technology</span>
           </motion.h2>
           
           <motion.p
@@ -64,14 +64,14 @@ export const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
-            We specialize in three core areas that drive digital transformation and business growth. 
+            We specialize in three core areas that drive digital transformation and business growth.
             Explore our services and discover how we can help you achieve your goals.
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Column - Accordion */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -88,9 +88,9 @@ export const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative"
+            className="relative mt-8 lg:mt-0"
           >
-            <div className="relative glass-card p-8 overflow-hidden">
+            <div className="relative glass-card p-6 sm:p-8 overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-brand-primary to-brand-accent rounded-lg opacity-10"></div>
@@ -100,7 +100,7 @@ export const ServicesSection: React.FC = () => {
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Why Choose nexlifAI?
                 </h3>
                 
@@ -108,37 +108,37 @@ export const ServicesSection: React.FC = () => {
                   <div className="flex items-start space-x-4">
                     <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Expert Team</h4>
-                      <p className="text-gray-600">Our team of AI engineers and developers bring decades of combined experience.</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Expert Team</h4>
+                      <p className="text-gray-600 dark:text-gray-300">Our team of AI engineers and developers bring decades of combined experience.</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Proven Results</h4>
-                      <p className="text-gray-600">We&apos;ve successfully delivered 500+ projects with measurable business impact.</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Proven Results</h4>
+                      <p className="text-gray-600 dark:text-gray-300">We&apos;ve successfully delivered 500+ projects with measurable business impact.</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-6 h-6 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex-shrink-0 mt-1"></div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">24/7 Support</h4>
-                      <p className="text-gray-600">Round-the-clock support to ensure your systems run smoothly.</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">24/7 Support</h4>
+                      <p className="text-gray-600 dark:text-gray-300">Round-the-clock support to ensure your systems run smoothly.</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Stats */}
-                <div className="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200">
+                <div className="grid grid-cols-2 gap-6 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-gradient">40%</div>
-                    <div className="text-sm text-gray-600">Cost Reduction</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Cost Reduction</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-gradient">3x</div>
-                    <div className="text-sm text-gray-600">Faster Delivery</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Faster Delivery</div>
                   </div>
                 </div>
               </div>

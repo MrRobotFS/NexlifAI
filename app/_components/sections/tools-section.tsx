@@ -47,10 +47,10 @@ const technologyCards = [
 ];
 
 const geometricShapes = [
-  { type: "triangle", className: "w-8 h-8 bg-blue-200 clip-triangle" },
-  { type: "circle", className: "w-6 h-6 bg-teal-200 rounded-full" },
-  { type: "square", className: "w-7 h-7 bg-indigo-200 rounded-sm" },
-  { type: "diamond", className: "w-6 h-6 bg-cyan-200 rotate-45" },
+  { type: "triangle", className: "w-8 h-8 bg-brand-primary/20 dark:bg-brand-light/20 clip-triangle" },
+  { type: "circle", className: "w-6 h-6 bg-brand-accent/20 dark:bg-brand-light/20 rounded-full" },
+  { type: "square", className: "w-7 h-7 bg-brand-secondary/20 dark:bg-brand-light/20 rounded-sm" },
+  { type: "diamond", className: "w-6 h-6 bg-brand-primary/30 dark:bg-brand-light/30 rotate-45" },
 ];
 
 const ToolsSection = () => {
@@ -141,16 +141,16 @@ const ToolsSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen bg-white overflow-hidden">
+    <section ref={containerRef} className="relative h-screen bg-white dark:bg-gray-900 overflow-hidden">
       {/* Slide 1: Hero with Geometric Shapes */}
       <div ref={slide1Ref} className="absolute inset-0 flex items-center justify-center">
         <div className="text-center z-10">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900">Able to work</h2>
-          <h3 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">Able to work</h2>
+          <h3 className="text-5xl md:text-6xl font-bold text-gradient">
             with hundreds of tools
           </h3>
-          <p className="mt-6 text-lg text-gray-600 max-w-2xl">
-            Devin connects to your favorite MCP servers, from Asana to Zapier
+          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-2xl">
+            NexlifAI connects to your favorite tools and services, from Asana to Zapier
           </p>
         </div>
 
@@ -170,7 +170,7 @@ const ToolsSection = () => {
       </div>
 
       {/* Slide 2: Automation Benefits */}
-      <div ref={slide2Ref} className="absolute inset-0 bg-gradient-to-br from-gray-50 to-blue-50 flex items-center justify-center">
+      <div ref={slide2Ref} className="absolute inset-0 bg-gradient-to-br from-gray-50 to-brand-light/20 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side: AI Brain Animation */}
           <div className="flex flex-col items-center">
@@ -183,10 +183,10 @@ const ToolsSection = () => {
               />
             </div>
             <div className="text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Automatización Inteligente
               </h2>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 Transforma tu empresa con IA que nunca duerme
               </p>
             </div>
@@ -198,15 +198,15 @@ const ToolsSection = () => {
               <div key={i} className="automation-feature opacity-0">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-brand-primary to-brand-accent rounded-full flex items-center justify-center">
                       <span className="text-white font-bold text-lg">{i + 1}</span>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -267,7 +267,7 @@ const ToolsSection = () => {
               </div>
 
               <div className="flex items-start space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-teal-400 rounded-lg flex items-center justify-center text-white text-sm font-bold">
+                <div className="w-8 h-8 bg-gradient-to-r from-brand-primary to-brand-accent rounded-lg flex items-center justify-center text-white text-sm font-bold">
                   D
                 </div>
                 <div>
@@ -289,14 +289,14 @@ const ToolsSection = () => {
       </div>
 
       {/* Slide 4: Technology Integration Cards */}
-      <div ref={slide4Ref} className="absolute inset-0 bg-gradient-to-br from-slate-50 to-gray-100 flex items-center justify-center">
+      <div ref={slide4Ref} className="absolute inset-0 bg-gradient-to-br from-slate-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
         <div className="max-w-7xl mx-auto px-12">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Conecta con tus herramientas favoritas
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Integra Devin con más de 100+ servicios y plataformas que ya usas en tu empresa
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Integra NexlifAI con más de 100+ servicios y plataformas que ya usas en tu empresa
             </p>
           </div>
 
@@ -318,10 +318,10 @@ const ToolsSection = () => {
                   <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">
                     {tech.icon}
                   </div>
-                  <h3 className="font-semibold text-gray-900 text-center text-sm mb-1">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-center text-sm mb-1">
                     {tech.name}
                   </h3>
-                  <p className="text-xs text-gray-600 text-center opacity-80">
+                  <p className="text-xs text-gray-600 dark:text-gray-300 text-center opacity-80">
                     {tech.description}
                   </p>
                 </div>
@@ -330,7 +330,7 @@ const ToolsSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-teal-400 text-white font-medium">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-brand-primary to-brand-accent text-white font-medium">
               <span className="mr-2">+88 integraciones más</span>
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />

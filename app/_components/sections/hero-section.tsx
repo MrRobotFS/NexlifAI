@@ -36,7 +36,7 @@ const Headline = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.3 }}
-    className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
+    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight"
   >
     <motion.span
       className="block text-gradient"
@@ -46,7 +46,7 @@ const Headline = () => (
       Build the Future
     </motion.span>
     <motion.span
-      className="block text-gray-900 dark:text-white mt-2"
+      className="block text-gray-900 dark:text-white mt-1 sm:mt-2"
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300 }}
     >
@@ -67,7 +67,7 @@ const Subheadline = () => (
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.5 }}
-    className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
+    className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"
   >
     nexlifAI delivers cutting-edge AI solutions, custom applications, and powerful
     automations to scale your business and transform your operations.

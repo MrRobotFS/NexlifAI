@@ -30,7 +30,7 @@ const AccordionItem: React.FC<AccordionItemProps & { isOpen: boolean; onToggle: 
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <div className={`p-3 rounded-lg ${isOpen ? 'bg-gradient-to-r from-accent-purple to-accent-blue text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300'}`}>
+            <div className={`p-3 rounded-lg ${isOpen ? 'bg-gradient-to-r from-brand-primary to-brand-accent text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300'}`}>
               {icon}
             </div>
             <h3 className={`text-xl font-semibold ${isOpen ? 'text-gradient' : 'text-gray-900 dark:text-white'}`}>
